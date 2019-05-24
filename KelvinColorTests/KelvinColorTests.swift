@@ -24,9 +24,9 @@ class KelvinColorTests: XCTestCase {
         var g: CGFloat = 0
         var b: CGFloat = 0
         color.getRed(&r, green: &g, blue: &b, alpha: nil)
-        XCTAssertEqualWithAccuracy(r * 255, red, accuracy: 1.5)
-        XCTAssertEqualWithAccuracy(g * 255, green, accuracy: 1.5)
-        XCTAssertEqualWithAccuracy(b * 255, blue, accuracy: 1.5)
+        XCTAssertEqual(r * 255, red, accuracy: 1.5)
+        XCTAssertEqual(g * 255, green, accuracy: 1.5)
+        XCTAssertEqual(b * 255, blue, accuracy: 1.5)
     }
 
 }
