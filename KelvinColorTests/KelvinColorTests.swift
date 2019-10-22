@@ -17,6 +17,14 @@ class KelvinColorTests: XCTestCase {
         assertColor(UIColor(temperature: 17500), red: 173, green: 200, blue: 255)
         assertColor(UIColor(temperature: 3000), red: 255, green: 180, blue: 107)
         assertColor(UIColor(temperature: 37500), red: 156, green: 188, blue: 255)
+        
+    }
+    
+    func testKelvinFromColor() {
+        XCTAssertEqual(UIColor(red: 255, green: 249, blue: 253, alpha: 1.0).temperature, 6500, accuracy: 50)
+        XCTAssertEqual(UIColor(red: 255, green: 203, blue: 104, alpha: 1.0).temperature, 2936, accuracy: 50)
+        XCTAssertEqual(UIColor(red: 169, green: 229, blue: 255, alpha: 1.0).temperature, 19527, accuracy: 50)
+        XCTAssertEqual(UIColor(red: 200, green: 209, blue: 168, alpha: 1.0).temperature, 5250, accuracy: 50)
     }
 
     private func assertColor(_ color: UIColor, red: CGFloat, green: CGFloat, blue: CGFloat) {
